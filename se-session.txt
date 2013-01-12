@@ -1,0 +1,42 @@
+How Simultaneous Edit works
+
+Simultaneous Edit basically sends commands to multiple distributed
+instances of editors to keep each individual editor's buffer in sync
+with a global copy.  There is one process that acts as a server.  All
+other processes are editor clients.  The server keeps the global and
+definitive copy.
+
+When each editor makes changes to its copy, it keeps track of the last
+updated global copy and the current local copy.  After a series of
+local changes has been made, an editor will try to apply its local
+changes to the global copy by contacting the server.  When an editor
+contacts the server, it not only sends the change commands but also
+the sequence number of its last updated global copy.  If the sequence
+number of the server's copy and the sequence number of the editor's
+copy are the same, then there is no potential for update conflicts.
+Otherwise, the server will update the local changes so that they apply
+to the current global copy.  This event will happen if two editors
+attempt to update the global copy at the same time.  If the changes
+don't conflict with each other, they are applied.  If they do, then
+they are rejected, and the user of the editor whose changes were
+rejected will be notified of such, along with any other users who
+caused the conflict.  At this point, the users should converse with
+each other via an IRC-like means to resolve the conflict.
+
+Note that if multiple users are always simultaneously editing and
+their editors are always simultaneously updating with the server,
+there will always be potentially-conflicting updates that the server
+will have to modify and apply them if there are no conflicts.  This
+also means that the server will have to keep a backlog of several
+previous versions of the document so that changes can be updated and
+applied with the server's version.  Generally, the number of backlogs
+that should be kept track of should be equal to the number of
+concurrent users plus one.  Note that the mechanism of Simultaneous
+Edit necessarily limits the total number of users who may concurrently
+edit a file.  Ideally, for even larger workings, files should be
+broken apart so that they can individually be serviced.
+
+UPDATE: I do not have to write this program, as Gobby and Rudel are
+already available and basically do everything that I was planning on
+making my program do.  It was sure fun learning about sockets,
+however.
