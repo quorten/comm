@@ -1,4 +1,10 @@
-/* Test creating a FIFO.  */
+/* Test creating a FIFO.
+
+Public Domain 2012, 2013, 2020 Andrew Makousky
+
+See the file "UNLICENSE" in the top level directory for details.
+
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

@@ -1,5 +1,11 @@
 /* Create a Unix-domain socket and write everything that gets sent to
-   it to standard output.  Stop after 100 bytes are transferred.  */
+   it to standard output.  Stop after 100 bytes are transferred.
+
+Public Domain 2012, 2020 Andrew Makousky
+
+See the file "UNLICENSE" in the top level directory for details.
+
+*/
 
 #include <stdio.h>
 #include <errno.h>

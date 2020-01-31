@@ -3,7 +3,13 @@
 
    NOTE: I found out that most of my code was already written into the
    library `libevent'.  Perhaps I should make some sort of effort to
-   standardize on it.  */
+   standardize on it.
+
+Public Domain 2012, 2020 Andrew Makousky
+
+See the file "UNLICENSE" in the top level directory for details.
+
+*/
 #ifndef NETSUPP_H
 #define NETSUPP_H
 

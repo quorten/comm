@@ -1,4 +1,10 @@
-/* Send data to a Unix-domain socket.  */
+/* Send data to a Unix-domain socket.
+
+Public Domain 2012, 2020 Andrew Makousky
+
+See the file "UNLICENSE" in the top level directory for details.
+
+*/
 
 #include <stdio.h>
 #include <errno.h>

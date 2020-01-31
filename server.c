@@ -1,5 +1,10 @@
 /*
 ** server.c -- a stream socket server demo
+
+Public Domain 2012, 2020 Andrew Makousky
+
+See the file "UNLICENSE" in the top level directory for details.
+
 */
 
 #include <stdio.h>

@@ -1,4 +1,10 @@
-/* Test getting a line of text from a FIFO.  */
+/* Test getting a line of text from a FIFO.
+
+Public Domain 2012, 2020 Andrew Makousky
+
+See the file "UNLICENSE" in the top level directory for details.
+
+*/
 
 #include <stdio.h>
 #include <signal.h>

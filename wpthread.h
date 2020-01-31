@@ -1,5 +1,10 @@
 /* A lightweight and incomplete pthreads to Windows threads wrapper.
-   This file is in Public Domain.  */
+
+Public Domain 2012, 2020 Andrew Makousky
+
+See the file "UNLICENSE" in the top level directory for details.
+
+*/
 #ifndef WPTHREAD_H
 #define WPTHREAD_H
 
